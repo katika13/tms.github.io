@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,400,700|Raleway:100,400,700&display=swap&subset=cyrillic');
+@import url('./font-awesome.css');
+    
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h2 {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    margin: 0 auto;
+}
+
+.block-header {
+    display: block;
+    margin: auto;
+    text-align: center;
+    
+}
+.block-header h2 {
+    margin-top: 108px;
+}
+.devider {
+    width: 64px;
+    height: 2px;
+    margin: 30px auto;
+    background: #ff8d2d;
+}
+
+.second-block .devider {
+    background: #FFF;
+}
+.second-block h2, .second-block p{
+    color: #FFF;
+}
+
+.content {
+    display: flex;
+    max-width: 1080px;
+    margin: auto;
+}
+.content-item {
+    padding: 16px;
+}
+.content-item-block {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ff8d2d;
+    margin: auto;
+    text-align: center;
+}
+.content-item-block .far, .content-item-block .fa {
+    color: #ff8d2d;
+    font-size: 32px;
+    line-height: 70px;
+}
+
+.content-item-title {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 30px 0;
+}
+.content-item-description{
+    text-align: center;
+    color: #888;
+    margin-bottom: 80px;
+    font-size: 14px; 
+}
+.second-block{
+    margin: 0 auto;
+    background-image: url('../images/u25_state0.jpg'), linear-gradient(45deg,#f00,#FFF);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1400px;
+    height: 320px;
+    text-align: center;
+}
+.second-block h2 {
+    padding-top: 65px;
+}
+.second-block .content-item-description {
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+}
+.button-download{
+    box-sizing: border-box;
+    width: 135px;
+    height: 42px;
+    background: none;
+    border: 2px solid #FFF;
+    color:#FFF;
+    font-size: 15px;
+    font-weight: 600;
+}
+.button-download:hover {
+    cursor: pointer;
+}
+.footer {
+    margin: 0 auto;
+    background-color: #000;
+    max-width: 1400px;
+    height: 100px;
+    text-align: center;
+}
+.footer .fab, .footer .fas {
+    color: #FFF;
+    padding: 35px 10px 15px;
+}
+.copyright{
+    color: #FFF;
+    font-size: 12px;
+    opacity: 0.5;
+}
