@@ -213,13 +213,13 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     padding: 0;
 }
 .social-block_content {
-    display: flex;
     max-width: 1080px;
+    height: 110px;
     margin: 0 auto;
     padding: 22px 0;
 }
 .social-block_info {
-    padding-right: 125px;
+    float: left;
 }
 .social-block_info h3 {
     font-size: 20px;
@@ -232,10 +232,13 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     font-size: 14px;
     line-height: 1.5;
 }
+.social-block_icons {
+    float: right;
+}
 .social-block_icons a {
     font-size: 48px;
     color: #ccc;
-    padding: 10px 20px;
+    padding: 0px 20px;
 }
 .social-block_icons a:hover {
     color: #ff8b38;
@@ -320,6 +323,7 @@ i.fas.fa-dollar-sign {
 }
 .content {
     display: flex;
+    justify-content: space-between;
     max-width: 1080px;
     margin: auto;
     padding-top: 80px;
@@ -354,11 +358,7 @@ i.fas.fa-dollar-sign {
     line-height: 1.5;
 }
 .review-item {
-    width: 33.3%;
-    margin-right: 120px;
-}
-.review_item:last-child {
-    margin-right: 0;
+    max-width: 273px;
 }
 .review-item-block {
     display: flex;
@@ -383,7 +383,7 @@ i.fas.fa-dollar-sign {
 }
 .review-item-comment {
     padding: 25px 10px;
-    width: 273px;
+    max-width: 273px;
     border-radius: 5px;
     background-color: #f5f5f5;
     font-size: 14px;
@@ -510,16 +510,156 @@ section.contacts-block {
     opacity: 0.5;
 }
 
-@media screen and (max-width: 1080px) {
+@media (min-width: 769px) and (max-width: 1024px) {
    .header-block_menu {
-    padding: 0 15px;
+        padding: 0 15px;
 }
     section {
-    padding-right: 15px;
-    padding-left: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
     .social-block {
-    padding-right: 15px;
-    padding-left: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .social-block_icons {
+        padding: 15px 0;
+    }
+    .social-block_icons a {
+        font-size: 30px;
+        padding: 10px;
+    }
+    .review-item {
+        padding: 5px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        display: block;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    h1:before {
+        background-position: center;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .content, .pricing-block_list, .social-block_content {
+        display: block;
+        margin: 0 auto;
+    }
+    .header-block_info .content-item-description {
+        text-align: center;
+    }
+    .social-block {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .social-block_content {
+        margin: 0 auto;
+    }
+    .social-block_icons {
+        padding: 15px 0;
+    }
+    .social-block_icons a {
+        font-size: 30px;
+        padding: 10px;
+    }
+    .header-block {
+        height: fit-content;
+    }
+    .header-block_content {
+        display: block;
+        margin: 0 auto;
+        padding-top: 75px;
+    }
+    .header-block_info, .header-block_signup {
+        width: 100%;
+        display: block;
+    }
+    h1:after {
+        float: none;
+    }
+    
+    .pricing-block_item, .pricing-block_item:last-child {
+        width: 100%;
+        margin: 0 auto 15px;
+    }
+    .review-item {
+        margin: 0 auto 15px;
+    }
+    .contact-fields_list {
+        display: block;
+        margin: 0 auto;
+    }
+    .contacts-fields_col {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    #trial-form .contact-field_item {
+        width: 80%;
+    }
+    .menu-list li a {
+        padding: 0 5px;
+    }
+    .menu-list li:last-child a {
+        padding-right: 10px;
+    }
+    .logo {
+        padding-left: 10px;
+    }
+    #trial-form {
+        margin-top: 30px;
+        float: none;
+        width: 100%;
+    } 
+    .trial-fields_header {
+        width: 100%;
+    }
+}
+@media (max-width: 733px) {
+    .social-block_content {
+        height: 180px;
+    }
+    .social-block_icons {
+        padding: 15px 0;
+        float: left;
+    }
+}
+@media (max-width: 375px) {
+    .menu-list {
+        padding: 15px 0;
+    }
+    .menu-list ul {
+        float: none;
+    }
+    .menu-list li a {
+        padding: 0 2px;
+    }
+    .menu-list li a:last-child {
+        padding-right: 2px;
+    }
+    .logo {
+        margin: 0 auto;
+        float: none;
+    }
+    .design-block h2 {
+        padding-top: 30px;
+    }
+    .social-block_icons a {
+        font-size: 24px;
+        padding: 5px;
     }
 }
