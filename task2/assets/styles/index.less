@@ -307,19 +307,19 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     font-weight: bold;
     text-transform: none;
 }
-li.first-line {
+.first-line {
     padding: 20px 0;
     font-size: 20px;
     text-transform: none;
 }
-li.second-line {
+.second-line {
     padding: 0;
     margin: 1px 0;
     font-family: 'Raleway', sans-serif;
     font-size: 94px;
     font-weight: 600;
 }
-li.third-line {
+.third-line {
     padding: 20px 0;
     font-size: 14px;
     font-style: italic;
@@ -327,16 +327,17 @@ li.third-line {
     text-transform: none;
     color: rgba(255, 255, 255, 0.5);
 }
-li.fourth-line {
+.fourth-line {
     min-height: 5px;
     background-color: #ff8b38;
     padding: 0;
     margin: 0;
 }
-li.pricing-block_item_option.fourth-line {
+.pricing-block_item_option.fourth-line {
     padding: 14px 0;
     color: #FFF;
     font-weight: 700;
+    background-color: #ff8b38;
 }
 i.fas.fa-dollar-sign {
     font-size: 35px;
@@ -371,11 +372,18 @@ i.fas.fa-dollar-sign {
     border: 2px solid #ff8d2d;
     margin: auto;
     text-align: center;
-}
-.content-item-block .far, .content-item-block .fa {
-    color: #ff8d2d;
-    font-size: 32px;
-    line-height: 70px;
+
+    .far {
+        color: #ff8d2d;
+        font-size: 32px;
+        line-height: 70px;
+    }
+    
+    .fa {
+        color: #ff8d2d;
+        font-size: 32px;
+        line-height: 70px;
+    }
 }
 
 .content-item-title {
@@ -407,13 +415,15 @@ i.fas.fa-dollar-sign {
     color: #333333;
     font-size: 20px;
     font-weight: bold;
+
+    p:last-child {
+        padding-top: 5px;
+        color: #86878b;
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
-.reviewer-info p:last-child {
-    padding-top: 5px;
-    color: #86878b;
-    font-size: 14px;
-    font-weight: 400;
-}
+
 .review-item-comment {
     padding: 25px 10px;
     max-width: 273px;
@@ -424,20 +434,22 @@ i.fas.fa-dollar-sign {
     line-height: 1.5;
     color: #86878b;
     position: relative;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: -30px;
+        left: 7%;
+        border-top: 15px solid #f5f5f5;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        width: 0;
+        height: 0;
+    }
 }
-.review-item-comment:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    bottom: -30px;
-    left: 7%;
-    border-top: 15px solid #f5f5f5;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    width: 0;
-    height: 0;
-}
+
 section.design-block{
     background-image: url('../images/city.jpg'), linear-gradient(45deg,#f00,#FFF);
     background-position: center;
