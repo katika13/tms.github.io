@@ -123,9 +123,6 @@ a {
         .only-desktop {
             display: none;
         }
-        
-        @keyframes bugfix { from {padding:0;} to {padding:0;}}
-        @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;}}
 
         #overlay-button {
             position: absolute;
@@ -622,9 +619,17 @@ a {
         max-width: 1170px;
         color: #FFF;
         
+        @media (max-width:468px) {
+            display: block;
+        }
+        
         ul {
             width: 33%;
             margin-right: 30px;
+            @media (max-width:468px) {
+                width: 100%;
+                padding: 20px;
+            }
             
             &:last-child {
                 margin-right: 0;
