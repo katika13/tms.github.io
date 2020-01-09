@@ -1,0 +1,57 @@
+@family: serif;
+@font-default: 'Raleway', @family;
+@font-title: 'Open Sans', @family;
+@red-color: #e84545;
+.font(@font-name: @font-default, @font-size: 13px, @color: #FFF, @weight: 400, @transform: uppercase){
+    font-family: @font-name;
+    font-size: @font-size; 
+	color: @color;	
+    font-weight: @weight;
+    text-transform: @transform;
+}
+.feature-font(@font-size: 14px, @font-name: @font-default){
+    font-size: @font-size;
+    font-family: @font-default;
+}
+.button {
+    display: block;
+    width: 200px;
+    padding: 18px;
+    border-radius: 2px;
+    background-color: @red-color;
+    margin: 0 auto;
+    border: 0;
+    cursor: pointer;
+}
+.grid-block {
+    grid-auto-flow: initial;
+    display: grid;
+    overflow-x: scroll;
+    justify-content: center;
+}
+.rectangle {
+    background-size: cover;
+    background-position: center;
+}
+.social-icons (@color:#c6cacc, @linkdin-color:#FFF){
+    a {
+        color: @color; 
+        box-sizing: border-box;
+        width: 44px;
+        height: 44px;
+        display: inline-block;
+
+        i {
+            font-size: 18px;
+            text-align: center;
+            display: block;
+            padding: 13px 0;
+        }
+    }
+    .fa-linkedin-in:before {
+        padding: 1px 2px;
+        border-radius: 1px;
+        color: @linkdin-color;
+        background-color: @color;
+    }
+}
