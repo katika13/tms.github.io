@@ -1,6 +1,4 @@
 //1st task
-
-
 const data = [
     {
         name: 'Ivan',
@@ -18,14 +16,15 @@ const data = [
         age: '31'
     }
 ];
-let askForm = prompt("What's your surname?")
+let searchValue = prompt("What's your surname?")
 
 for (let i = 0; i < data.length ; i++) {
     
-    if (askForm === data[i].surname)
-    alert(`User name: ${data[i].name}, User surname: ${data[i].surname}, User age: ${data[i].age}`);
-    else 
-    alert(`No results found for your request!`);
+    if (searchValue === data[i].surname){
+        alert(`User name: ${data[i].name}, User surname: ${data[i].surname}, User age: ${data[i].age}`);
+    }else{
+        alert(`No results found for your request!`);
+    } 
     break;
 }
 
@@ -48,13 +47,15 @@ const data = [
         age: '31'
     }
 ];
-let askForm = prompt("What's your surname?")
+let searchValue = prompt("What's your surname?");
+let resultValue = searchValue.toLowerCase();
+let alertValue = 'No results found for your request!';
 
 for (let i = 0; i < data.length ; i++) {
-    
-    if (askForm.toLowerCase() === data[i].surname.toLocaleLowerCase())
-    alert(`User name: ${data[i].name}, User surname: ${data[i].surname}, User age: ${data[i].age}`);
-    else 
-    alert(`No results found for your request!`);
-    break;
+    if (resultValue === data[i].surname.toLowerCase()) {
+        alertValue = `User name: ${data[i].name}, User surname: ${data[i].surname}, User age: ${data[i].age}`;
+        break;
+    }
 }
+alert(`${alertValue}`);
+
