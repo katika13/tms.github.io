@@ -70,6 +70,24 @@ function fibonacci(n) {
         console.log(`Please, use correct number`)
     }
 }
+///
+//let prev1
+//let prev2
+//
+//for (let i=9; i <= n; i++){
+//    prev1 = arr[i-2];
+//    prev2 = arr[i-1];
+//    arr.push(prev1 + prev2)
+//}
+//// через рекурсию зацикленная функция сама на себя
+//let arr=[0,1]
+//function fibonacci(n){
+//    if(n<2){
+//        return n
+//    }
+//    return fibonacci(n-1) + fibonacci(n-2)
+//}
+
 
 //var.2 to do
 
@@ -91,10 +109,10 @@ fibonacci(99); // 218922995834555200000
 function sum(n) {
     let pageNumbers = [];
     for (let i = 1; i <= n; i++) {
-        pageNumbers.push(i);
+        pageNumbers.push(i); //arr[i] return pageNumbers.join('').split('').reduce((acc, curr) => {
     }
     let sumAllPageNumbers = pageNumbers.toString().replace(/,+/g,'').split('').reduce((acc, curr) => {
-        return parseInt(acc) + parseInt(curr);
+        parseInt(acc) += parseInt(curr);
     },);
     return sumAllPageNumbers
 }
